@@ -108,10 +108,13 @@ exports.postAdminLogin = (req, res) => {
 
 // Render the user UI
 exports.getUserUI = (req, res) => {
-    res.render('userUI');
+    res.render('home'); 
 };
 
 // Render the admin UI
-exports.getAdminUI = (req, res) => {
-    res.render('adminUI');
+const Product = require('../models/Product'); // Adjust the path as needed
+
+exports.getAdminUI = async (req, res) => {
+   
+    res.render('admin'); 
 };
